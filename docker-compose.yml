@@ -12,9 +12,9 @@ logstash:
     - ./logstash/config:/etc/logstash/conf.d
   ports:
     - "5000:5000"
-    - "5140:5140"
-    - "5141:5141"
-    - "5142:5142"
+    - "5140:5140/udp"
+    - "5141:5141/udp"
+    - "5142:5142/udp"
   links:
     - elasticsearch
 
