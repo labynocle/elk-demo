@@ -14,7 +14,7 @@ The suggested stack is composed by:
 * an ElasticSearch instance which expose 2 ports: 9200 (HTTP for the Rest API) and 9300 (for the transport module)
 * a Logstash instance which expose the 5000 port (TCP input to let you easily inject data)
 * a Kibana instance which expose the 5601 port (HTTP for the dashboard web interface)
-* a Kopf instance which expose the 80 port (HTTP for the admin web interface)
+* a Cerebro instance which expose the 9000 port (HTTP for the admin web interface)
 
 
 ## Requirements
@@ -38,7 +38,7 @@ nc localhost 5000 < data/random_data.json
 ```
 
 Finally browse on:
-* http://127.0.0.1:80 to manage the created index
+* http://127.0.0.1:9000 to manage the created index (just choose to connect to `http://elasticsearch:9200`)
 * http://127.0.0.1:5601 to start to play with Kibana
 
 

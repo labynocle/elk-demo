@@ -1,6 +1,6 @@
 elasticsearch:
-  image: elasticsearch:2.4.0
-  command: elasticsearch -Des.network.host=0.0.0.0 -Dhttp.cors.enabled=yes -Dhttp.cors.allow-origin=/.*/
+  image: elasticsearch:6.7.0
+  command: elasticsearch -Enetwork.host=0.0.0.0 -Ehttp.cors.enabled=true -Ehttp.cors.allow-origin=/.*/
   ports:
     - "9200:9200"
     - "9300:9300"
@@ -24,7 +24,9 @@ kibana:
   links:
     - elasticsearch
 
-kopf:
-  image: labynocle/docker_kopf
+cerebro:
+  image: yannart/cerebro:0.8.1
   ports:
-    - "80:80"
+    - "9000:9000"
+  links:
+    - elasticsearch

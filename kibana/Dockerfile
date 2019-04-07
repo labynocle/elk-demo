@@ -1,10 +1,12 @@
-FROM kibana:4.6.0
+FROM kibana:6.7.0
 
-RUN apt-get update && apt-get install -y netcat
+USER root
+
+RUN yum update -y && yum install -y nmap
 
 COPY entrypoint.sh /tmp/entrypoint.sh
 RUN chmod +x /tmp/entrypoint.sh
 
-RUN kibana plugin --install elastic/sense
+USER kibana
 
 CMD ["/tmp/entrypoint.sh"]
