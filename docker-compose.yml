@@ -7,7 +7,7 @@ elasticsearch:
 
 logstash:
   build: logstash/
-  command: logstash -f /etc/logstash/conf.d/logstash.conf
+  command: logstash -f /etc/logstash/conf.d/logstash.conf --config.reload.automatic
   volumes:
     - ./logstash/config:/etc/logstash/conf.d
   ports:
