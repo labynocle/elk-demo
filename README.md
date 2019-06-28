@@ -1,6 +1,6 @@
 # ELK Demo
 
-This little repository is linked to the following light talk: [Suivre son activité avec une stack ELK](http://bunkrapp.com/present/8tfk8o) [FR].
+This little repository is linked to the following light talk: [Suivre son activité avec une stack ELK](https://docs.google.com/presentation/d/1iNAxMmW7tp6p_tqDKqbjXWWat2i3nIMsxofLzf1YF0E/edit?usp=sharing) [FR].
 
 The aim of this repository is to have a basic and simple way to play with Kibana and some data.
 
