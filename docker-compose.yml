@@ -4,7 +4,14 @@ services:
   elasticsearch:
     image: elasticsearch:7.5.0
     container_name: elk-es
-    command: elasticsearch -Enetwork.host=0.0.0.0 -Ehttp.cors.enabled=true -Ehttp.cors.allow-origin=/.*/ -Ediscovery.type=single-node -Etransport.host=localhost -Etransport.tcp.port=9300 -Ehttp.port=9200
+    command: elasticsearch
+              -Enetwork.host=0.0.0.0
+              -Ehttp.cors.enabled=true
+              -Ehttp.cors.allow-origin=/.*/
+              -Ediscovery.type=single-node
+              -Etransport.host=localhost
+              -Etransport.tcp.port=9300
+              -Ehttp.port=9200
     ports:
       - "9200:9200"
       - "9300:9300"
