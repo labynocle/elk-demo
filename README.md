@@ -21,7 +21,6 @@ The suggested stack is composed by:
 
 You just need to have:
 * [docker](https://docs.docker.com/engine/installation/linux/)
-* [docker-compose](https://docs.docker.com/compose/install/)
 
 
 ## How to use it?
@@ -29,7 +28,7 @@ You just need to have:
 It's pretty simple to launch the full stack:
 ```bash
 cd elk-demo
-sudo docker-compose up
+sudo docker compose up
 ```
 
 Then you just need to inject data:
